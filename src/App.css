@@ -23,13 +23,9 @@ h3 {
   margin-top: 15px;
 }
 
-<!--
 ul {
-  list-style-type: none;
-  text-align: center;
+  line-height: 3em;
 }
--->
-
 
 dl {
   list-style-type: disc;

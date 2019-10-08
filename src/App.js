@@ -39,6 +39,9 @@ class App extends Component {
    */
   handleAddItem(s) {
       // Implement this function!
+      let modifiedItems = this.state.items;
+      modifiedItems[s.list].push({name: s.newItem});
+      this.setState({items: modifiedItems});
   }
 
   /**
