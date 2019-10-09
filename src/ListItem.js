@@ -4,19 +4,20 @@ class ListItem extends Component {
 
     constructor(props) {
 	super(props);
-	this.state = { color: 'black' };
+	this.state = { isDone: false };
     }
 
     handleClick() {
-      this.setState( {color: this.state.color === 'black' ? 'gray' : 'black' } )
+      this.setState( {isDone: !this.state.isDone } )
     }
 
   render() {
     var item = this.props.item;
     var name = item.name;
+    var color = this.state.isDone ? 'grey' : 'black';
 
     return (
-	    <span onClick={this.handleClick.bind(this)} style={{color: this.state.color}}>
+	    <span onClick={this.handleClick.bind(this)} style={{color: color}}>
         <strong>{name}</strong>
       </span>
     );
